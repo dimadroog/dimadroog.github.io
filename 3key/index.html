@@ -4,7 +4,6 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, width = 320">
-      <meta http-equiv="Cache-Control" content="no-cache">
       <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
       <link rel="stylesheet" href="assets/lib/slick/slick.css">
       <link rel="stylesheet" href="assets/lib/slick/slick-theme.css"/>
@@ -17,15 +16,15 @@
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark d-flex">
          <div class="d-block d-lg-none order-lg-1">
-            <a class="b-navbar-hamburger" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="b-navbar-hamburger__line"></span>
-            <span class="b-navbar-hamburger__line"></span>
-            <span class="b-navbar-hamburger__line"></span>
-            </a>
+            <span class="b-navbar-hamburger" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" role="button">
+               <span class="b-navbar-hamburger__line"></span>
+               <span class="b-navbar-hamburger__line"></span>
+               <span class="b-navbar-hamburger__line"></span>
+            </span>
          </div>
          <div class="order-lg-2">
             <a class="navbar-brand mr-auto" href="#">
-            <img alt="Site Logo" class="b-navbar-img" src="assets/img/site/logo.png">
+            <img alt="Компания 3Key" class="b-navbar-img" src="assets/img/site/logo.png">
             </a>
          </div>
          <div class="order-lg-3 order-sm-4 collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,7 +52,7 @@
          <div class="navbar-text ml-auto order-lg-4 order-sm-3">
             <div class="d-flex align-items-center b-navbar-info">
                <div class="b-navbar-info__icon d-none d-sm-none d-md-block d-lg-none d-xl-block">
-                  <img class="mr-4" src="assets/img/site/header-call-icon.png">
+                  <img class="mr-4" alt="Позвоните нам" src="assets/img/site/header-call-icon.png">
                </div>
                <div class="b-navbar-info__contacts" itemscope="" itemtype="http://schema.org/Organization">
                   <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
@@ -426,11 +425,11 @@
                      </div>
                      <div class="col-sm-12 col-md-6 col-lg-3 order-md-2 order-lg-3">
                         <div class="b-contacts__item b-contacts__item_extra">
-                           <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                           <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
                               <div class="b-contacts__subtitle">Адрес:</div>
                               <meta itemprop="addressLocality" content="Кемерово">
                               <div class="b-contacts__value" itemprop="streetAddress">г. Кемерово, <br>ул. Демьяна Бедного 6, офис 38</div>
-                           </span>
+                           </div>
                         </div>
                      </div>
                      <div class="col-sm-12 col-md-6 col-lg-3 order-md-4 order-lg-4">
@@ -455,7 +454,7 @@
       <div class="b-form-wrapper text-center">
          <div class="container">
             <div class="b-form-wrapper__title">ОСТАЛИСЬ ВОПРОСЫ?</div>
-            <form class="b-form" action="" method="">
+            <form class="b-form" action="action" method="post">
                <div class="form-group">
                   <label class="b-form__label" for="name">Ваше имя:</label>
                   <input class="b-form__input form-control" type="email" id="name" placeholder="Илья Романов">
