@@ -46,18 +46,24 @@ body{
     margin: 0 auto;
     background: #fff;
 }
+.git-link{
+    color: #abc;
+    display: block;
+    text-align: center;
+    margin: 30px;
+    text-decoration: unset;
+}
+.git-link:focus,
+.git-link:hover{
+    text-decoration: underline;
+}
 
 
 /*mobile-brands*/
-.mobile-brands-nav-wrap{
+.mobile-brands-nav{
     height: 50px;
     position: sticky;
     top: 0;
-    padding: 0 10px 0 0;
-    background: #eaeaea;
-}
-.mobile-brands-nav{
-    height: 50px;
     display: flex;
     align-items: center;
     background: #eaeaea;
@@ -120,8 +126,8 @@ body{
         cursor:pointer;
     }
     .mobile-brands-nav::-webkit-scrollbar {
-        height: 6px;
-        width: 4px;
+        height: 8px;
+        width: 8px;
         border: 1px solid #d5d5d5;
     }
     .mobile-brands-nav::-webkit-scrollbar-track {
