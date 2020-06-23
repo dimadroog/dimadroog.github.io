@@ -150,12 +150,16 @@ h6 {
 /**/
 /*common*/
 body {
-	/*background: #abc;*/
 	font-family: "Ubuntu";
 	font-weight: 300;
 	font-size: 14px;
 	color: #151515;
 	line-height: 1.2;
+}
+.full-height-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .link {
 	text-decoration: underline;
@@ -903,6 +907,7 @@ body {
 /**/
 /*footer*/
 .footer {
+	margin-top: auto;
 	color: #fff;
 	background: #222d39;
 	border-top: 6px solid #589bda;
