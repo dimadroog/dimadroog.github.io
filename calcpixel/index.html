@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, width=320" />
+
+		<title>Test Calc</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+
+
+		<!--  -->
+		<!-- navbar -->
+
+			<nav class="navbar">
+				<div class="container">
+					<div class="navbar-grid">
+						<div class="navbar__logo">
+							<a href="#"><img class="navbar-logo" src="assets/img/navbar-logo.png" title="Альянс Плюс"></a>
+						</div>
+						<div class="navbar__info">
+							<div class="navbar__slogan">
+							Инженерные изыскания в Москве и Московской области
+							</div>
+							<div class="navbar__address">
+								<img class="navbar__info-icon" src="assets/img/navbar-icon-location.png" title="Наш адрес"> 
+								115054, г. Москва, ул. Пятницкая, 71/5, строение 8, этаж 1, оф. 7
+							</div>
+							<div class="navbar__button">
+								<a class="btn btn_blue btn_sm">Обратный звонок</a>
+							</div>
+							<div class="navbar__contacts">
+								<img class="navbar__info-icon" src="assets/img/navbar-icon-phone.png">
+								<div>
+									<a class="link navbar__link" href="tel:+74951262403">+7 (495) 126-24-03</a>
+									<a class="link" href="mailto:zakaz@aplus.ru">zakaz@aplus.ru</a>
+								</div>
+							</div>
+						</div>
+						<div class="navbar__menu">
+							<a class="navbar-hamburger">
+								<span class="navbar-hamburger__line"></span>
+								<span class="navbar-hamburger__line"></span>
+								<span class="navbar-hamburger__line"></span>
+							</a>
+							<div class="navbar-menu">
+								<div class="navbar-menu__item"><a class="link navbar-menu__link" href="#">Компания</a></div>
+								<div class="navbar-menu__item"><a class="link navbar-menu__link" href="#">Услуги</a></div>
+								<div class="navbar-menu__item"><a class="link navbar-menu__link" href="#">Контакты</a></div>
+								<div class="navbar-menu__item"><img class="navbar-menu__icon" src="assets/img/navbar-icon-calc.png"><a class="link navbar-menu__link" href="#">Расчет стоимости</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+		<!-- navbar -->
+		<!--  -->
+
+
+		<div class="abs-calc">
+			<div class="abs-calc__insert">
+				<img src="assets/img/body-icon-calc.png">
+				<div class="abs-calc__text">Рассчитать стоимость</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="breadcrumbs" itemprop="http://schema.org/breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+				<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					<span class="breadcrumbs__item">
+						<a class="link" href="#" title="Главная" itemprop="url"><span itemprop="name">Главная</span></a>
+					</span>
+					<meta itemprop="position" content="1" />
+				</span>
+				<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					<span class="breadcrumbs__delemiter">/</span>
+					<span class="breadcrumbs__item">
+					<span itemprop="name">Калькулятор</span>
+						<meta itemprop="position" content="2" />
+					</span>
+				</span>
+			</div>
+
+		</div>
+
+
+		<div class="container">
+			<h1 class="page-title">Калькулятор</h1>
+		</div>
+		
+		<!--  -->
+		<!-- calc -->
+
+		<div class="container">
+			<div class="stepbar-wrap">
+
+				<div class="stepbar-sm">
+					<select class="stepbar-sm__select" name="">
+						<option selected value="0">Услуга</option>
+						<option value="1">Адрес</option>
+						<option value="2">Площадь</option>
+						<option value="3">Ваши контакты</option>
+						<option value="4">Расчёт</option>
+					</select>
+				</div>
+
+				<div class="stepbar">
+					<div class="stepbar__ground">
+						<div class="stepbar__ground-item stepbar__ground-item_active"></div>
+						<div class="stepbar__ground-item"></div>
+						<div class="stepbar__ground-item"></div>
+						<div class="stepbar__ground-item"></div>
+						<div class="stepbar__ground-item"></div>
+					</div>
+
+					<div class="stepbar__dots">
+						<div class="stepbar__dots-item stepbar__dots-item_active"></div>
+						<div class="stepbar__dots-item"></div>
+						<div class="stepbar__dots-item"></div>
+						<div class="stepbar__dots-item"></div>
+						<div class="stepbar__dots-item"></div>
+					</div>
+
+					<div class="stepbar__list">
+						<div class="stepbar__list-item stepbar__list-item_active">
+							<div class="stepbar__text">Услуга</div>
+						</div>
+						<div class="stepbar__list-item">
+							<div class="stepbar__text">Адрес</div>
+						</div>
+						<div class="stepbar__list-item">
+							<div class="stepbar__text">Площадь</div>
+						</div>
+						<div class="stepbar__list-item">
+							<div class="stepbar__text">Ваши контакты</div>
+						</div>
+						<div class="stepbar__list-item">
+							<div class="stepbar__text">Расчёт</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="calc-steps">
+				<div class="step step_active">
+					<div class="step__title">Укажите какие услуги вам нужны</div>
+					<div class="step-one">
+						<div class="step-one">
+							<div class="step-one__item step-action-service">
+								<div class="step-one__img">
+									<img src="assets/img/calc-services-1.png" />
+								</div>
+								<div class="step-one__text">
+									Подготовка <br>технического <br>плана
+								</div>
+							</div>
+							<div class="step-one__item step-action-service">
+								<div class="step-one__img">
+									<img src="assets/img/calc-services-2.png" />
+								</div>
+								<div class="step-one__text">
+									Вынос <br>границ участка <br>в натуру
+								</div>
+							</div>
+							<div class="step-one__item step-action-service">
+								<div class="step-one__img">
+									<img src="assets/img/calc-services-3.png" />
+								</div>
+								<div class="step-one__text">
+									Подготовка <br>межевого <br>плана
+								</div>
+							</div>
+							<div class="step-one__item step-action-service">
+								<div class="step-one__img">
+									<img src="assets/img/calc-services-4.png" />
+								</div>
+								<div class="step-one__text">
+									Исполнительная <br>съёмка
+								</div>
+							</div>
+							<div class="step-one__item step-action-service">
+								<div class="step-one__img">
+									<img src="assets/img/calc-services-5.png" />
+								</div>
+								<div class="step-one__text">
+									Топографичекая <br>съёмка
+								</div>
+							</div>
+							<div class="step-one__item">
+								<div class="step-one__nav">
+									<div class="hint"><img src="assets/img/hint.png"></div>
+									<a class="btn btn_blue btn_arrow-right step-action-next">Дальше</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				
+				<div class="step">
+					<div class="step__title">Укажите адрес работ</div>
+					<div class="step-two">
+						<input class="input" type="text" name="" placeholder="Москва, МО,">
+						<div class="hint"><img src="assets/img/hint.png" alt=""></div>
+					</div>
+					<div class="step-nav">
+						<a class="step-nav_btn btn btn_arrow-left step-action-prev">Назад</a>
+						<a class="step-nav_btn btn btn_blue btn_arrow-right step-action-next">Дальше</a>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__title">Укажите площадь объекта в сотках</div>
+					<div class="step-three">
+						<input class="step-three__input input" type="number" name="" placeholder="99">
+						<label class="step-three__checkbox checkbox">
+							<input class="input-checkbox" type="checkbox" name="" checked="checked"> Подать документы
+						</label>
+						<div class="hint step-three__hint"><img src="assets/img/hint.png" alt=""></div>
+					</div>
+					<div class="step-nav">
+						<a class="step-nav_btn btn btn_arrow-left step-action-prev">Назад</a>
+						<a class="step-nav_btn btn btn_blue btn_arrow-right step-action-next">Дальше</a>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__title">Оставьте свои данные для расчёта суммы</div>
+					<div class="step-four">
+						<div class="step-four__col-left">
+							<div class="step-four__input-group">
+								<input class="input" type="text" name="" placeholder="Имя">
+								<input class="input" type="text" name="" placeholder="Телефон">
+							</div>
+							<textarea class="input input_textarea" placeholder="Комментарий"></textarea>
+						</div>
+						<div class="step-four__col-right">
+							<label class="checkbox">
+								<input class="input-checkbox" type="checkbox" name="" checked="checked"> Позвонить на телефон
+							</label>
+							<label class="checkbox">
+								<input class="input-checkbox" type="checkbox" name=""> Отправить сообщение в WhatsApp
+							</label>
+							<label class="checkbox">
+								<input class="input-checkbox" type="checkbox" name=""> Отправить сообщение в Viber
+							</label>
+							<div class="hint step-four__hint-top"><img src="assets/img/hint.png" alt=""></div>
+						</div>
+
+						<label class="checkbox step-four__checkbox">
+							<input class="input-checkbox" type="checkbox" name="" checked="checked"> <span>Согласие с <a class="link" target="_blank" href="#">Политикой персональных данных</a></span>
+						</label>
+						<div class="hint step-four__hint-bottom"><img src="assets/img/hint.png" alt=""></div>
+
+					</div>
+					<div class="step-nav step-four__step-nav">
+						<a class="step-nav_btn btn btn_arrow-left step-action-prev">Назад</a>
+						<a class="step-nav_btn btn btn_blue btn_arrow-right step-action-next">Дальше</a>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__title">Примерная сумма проекта</div>
+					<div class="step-five">
+
+						<div class="calc-result">
+							<div class="calc-result__data">
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">1. Услуга:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">Исполнительная съёмка</div>
+								</div>
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">По адресу:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">Москва, МО</div>
+								</div>
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">Площадь:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">21 сотка</div>
+								</div>
+							</div>
+							<div class="calc-result__sum">
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Ориентировочная стоимость услуги:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_through">10 000 р.</div>
+								</div>
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Скидка:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue">10%</div>
+								</div>
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Стоимость услуги с учетом скидки:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue">9 000 р.</div>
+								</div>
+							</div>
+							<div class="calc-result__info">
+								<div class="dotted-row dotted-row_info">
+									<div class="dotted-row__key">Акция</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue dotted-row__value_big">Геоакция на март</div>
+								</div>
+								<div class="calc-result__info-hint">
+									<a href="#" class="link link_dotted">Ориентировочный бюджет проекта с учетом скидки:</a>
+									<div class="hint calc-result__info-hint_hint"><img src="assets/img/hint-arrow-down.png" alt=""></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="calc-result">
+							<div class="calc-result__data">
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">1. Услуга:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">Исполнительная съёмка</div>
+								</div>
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">По адресу:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">Москва, МО</div>
+								</div>
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">Площадь:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">21 сотка</div>
+								</div>
+							</div>
+							<div class="calc-result__sum">
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Ориентировочная стоимость услуги:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue">10 000 р.</div>
+								</div>
+							</div>
+							<div class="calc-result__info calc-result__info_empty">
+
+							</div>
+						</div>
+
+						<div class="calc-result">
+							<div class="calc-result__data">
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">1. Услуга:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">Исполнительная съёмка</div>
+								</div>
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">По адресу:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">Москва, МО</div>
+								</div>
+								<div class="dotted-row dotted-row_data">
+									<div class="dotted-row__key">Площадь:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value">21 сотка</div>
+								</div>
+							</div>
+							<div class="calc-result__sum">
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Ориентировочная стоимость услуги:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_through">10 000 р.</div>
+								</div>
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Скидка:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue">10%</div>
+								</div>
+								<div class="dotted-row dotted-row_sum">
+									<div class="dotted-row__key">Стоимость услуги с учетом скидки:</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue">9 000 р.</div>
+								</div>
+							</div>
+							<div class="calc-result__info">
+								<div class="dotted-row dotted-row_info">
+									<div class="dotted-row__key">Акция</div>
+									<div class="dotted-row__dots"></div>
+									<div class="dotted-row__value dotted-row__value_blue dotted-row__value_big">Скидка на все 10%</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="calc-total">
+							<div class="calc-total__text">
+								<div class="calc-total__text-insert">
+									<span>
+										Ориентировочный бюджет <br>проекта с учётом скидки:
+									</span>
+								</div>
+							</div>
+							<div class="calc-total__value">15 990 р.</div>
+						</div>
+
+						<div class="calc-again">
+							<a class="calc-again__btn btn btn_blue calc-action-again" href="javascript:void(0)">Сделать ещё один расчёт</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- calc -->
+		<!--  -->
+
+
+		<!--  -->
+		<!-- footer -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-inner">
+					<div class="footer__address">
+						<div class="footer-address">
+							<div class="footer-address__logo"><img src="assets/img/footer-logo.png" alt=""></div>
+							<div class="footer-address__text">
+								<div class="footer-address__title">ООО «Альянс Плюс»</div>
+								<div class="footer-address__location">
+									115054, г. Москва, <nobr>ул. Пятницкая 71/5,</nobr> <br>
+									строение 8, этаж 1, оф. 7
+								</div>
+							</div>
+						</div>
+						<div class="footer-address-calc">
+							<a class="link footer-address-calc__link" href="">
+								<div class="footer-address-calc__icon">
+									<img src="assets/img/footer-icon-calc.png" alt="">
+								</div>
+								<div class="footer-address-calc__text">
+									Рассчитать стоимость
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="footer__services">
+						<div class="footer-menu">
+							<div class="footer-menu__title">Услуги</div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Геодезические работы</a></div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Кадастровые работы</a></div>
+						</div>
+					</div>
+					<div class="footer__navbar">
+						<div class="footer-menu">
+							<div class="footer-menu__title">Альянс Плюс</div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Компания</a></div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Сотрудники</a></div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Лицензии</a></div>
+							<div class="footer-menu__item"><a class="footer-menu__link" href="#">Акции</a></div>
+						</div>
+					</div>
+					<div class="footer__contacts">
+						<div class="footer-contacts">
+							<div class="footer-contacts__phone"><a class="link" href="tel:+74951262403">+7 (495) 126-24-03</a></div>
+							<div class="footer-contacts__mail"><a class="link" href="mailto:zakaz@aplus.ru">zakaz@aplus.ru</a></div>
+							<div class="footer-contacts__button">
+								<a class="btn btn_sm btn_blue footer-contacts__btn" href="#">Заказать звонок</a>
+							</div>
+							<div class="footer-contacts__created-by">
+								Создание сайта <br>
+								Компания «Пиксель Плюс»
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- footer -->
+		<!--  -->
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="assets/js/script.js"></script>
+
+	</body>
+</html>
