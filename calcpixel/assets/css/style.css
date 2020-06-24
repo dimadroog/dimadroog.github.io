@@ -185,7 +185,7 @@ body {
 	text-decoration: none;
 }
 .container {
-	max-width: 320px;
+	width: 320px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
@@ -994,7 +994,7 @@ body {
 	/**/
 	/*md common*/
 	.container {
-		max-width: 750px;
+		width: 750px;
 	}
 	.breadcrumbs {
 		padding-top: 25px;
@@ -1579,7 +1579,7 @@ body {
 	/**/
 	/*lg common*/
 	.container {
-		max-width: 1170px;
+		width: 1170px;
 	}
 	/*lg common*/
 	/**/
