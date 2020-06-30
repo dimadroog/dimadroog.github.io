@@ -1,3 +1,4 @@
+/**/
 /*defaults*/
 /*fonts*/
 /*common*/
@@ -516,6 +517,8 @@ body {
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
+
+
 .navbar-menu {
     display: none;
     background: #f4f4f4;
@@ -1103,9 +1106,9 @@ body {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        position: unset;
+        position: static;
+        background: transparent;
         padding: unset;
-        background: unset;
     }
     .navbar-hamburger {
         display: none;
@@ -1714,6 +1717,8 @@ body {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        position: static;
+        background: transparent;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
@@ -1865,4 +1870,4 @@ body {
     /**/
 }
 /*media xl*/
-/**/
+/*
