@@ -2,12 +2,16 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, width=480" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Test</title>
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />        
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" />
 
         <style type="text/css">
             .select2-dropdown {
@@ -17,66 +21,101 @@
                 box-shadow: none;
                 z-index: 999999 !important;
             }
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
         </style>
 
     </head>
     <body>
-                            <a class="link" href="#tst" data-fancybox="">tst tst</a>
 
 
+    
+<div>
             <select style="width: 300px" name="tst" id="" class="tst">
-                <option value="">itm</option>
-                <option value="">itm</option>
-                <option value="">itm</option>
-                <option value="">itm</option>
-                <option value="">itm</option>
+                <option value="">itm1</option>
+                <option value="">itm2</option>
+                <option value="">itm3</option>
+                <option value="">itm4</option>
+                <option value="">itm5</option>
             </select>
+</div>
 
 
-                    <div style="display:none">
-                        <div class="modal modal_sm" id="tst">
-                            <div class="modal__title">tst</div>
-                            <div>
-                                <select style="width: 300px" name="tst" id="" class="tst">
-                                    <option value="">itm</option>
-                                    <option value="">itm</option>
-                                    <option value="">itm</option>
-                                    <option value="">itm</option>
-                                    <option value="">itm</option>
-                                </select>
-                            </div>
 
 
-                            <div class="mt12 text-right">
-                                <a class="button" href="javascript:parent.$.fancybox.close();">Хорошо</a>
-                            </div>
-                        </div>
+
+<div>
+            <a href="#text-popup" class="popup-content">magnific-popup</a>
+
+            <div id="text-popup" class="white-popup mfp-hide">
+            <p>С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение направлений прогрессивного развития.</p>
+                <select style="width: 300px" name="tst" id="" class="tst">
+                    <option value="">itm1</option>
+                    <option value="">itm2</option>
+                    <option value="">itm3</option>
+                    <option value="">itm4</option>
+                    <option value="">itm5</option>
+                </select>
+            </div>
+</div>
+
+
+<div>
+            <a class="link" href="#tst" data-fancybox="">fancybox</a>
+
+            <div style="display:none">
+                <div class="modal modal_sm" id="tst">
+                    <div class="modal__title">tst</div>
+                    <div>
+                        <select style="width: 300px" name="tst" id="" class="tst">
+                            <option value="">itm1</option>
+                            <option value="">itm2</option>
+                            <option value="">itm3</option>
+                            <option value="">itm4</option>
+                            <option value="">itm5</option>
+                        </select>
                     </div>
 
 
+                    <div class="mt12 text-right">
+                        <a class="button" href="javascript:parent.$.fancybox.close();">Хорошо</a>
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js" integrity="sha512-RtZU3AyMVArmHLiW0suEZ9McadTdegwbgtiQl5Qqo9kunkVg1ofwueXD8/8wv3Af8jkME3DDe3yLfR8HSJfT2g==" crossorigin="anonymous"></script>
 
-<script>
-    
-    $("[data-fancybox]").fancybox({
-        afterShow: function( instance, slide ) {
-            // alert();
-            $('.tst').select2({ 
-                // dropdownParent: $('.fancybox-content') 
-            });
-        }
-    });
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
+
+        <script>
             $('.tst').select2({ 
                 // dropdownParent: $('.fancybox-content') 
             });
-</script>
+jQuery(document).ready(function($) {
+    $('.popup-content').magnificPopup({
+        type: 'inline'
+    });
+});
+        </script>
 
 
     </body>
