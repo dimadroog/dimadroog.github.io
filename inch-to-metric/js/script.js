@@ -1,4 +1,4 @@
-var itm = new Vue({
+let itm = new Vue({
     el: '#inch-to-metric',
     data: function() {
         return {
@@ -33,7 +33,6 @@ var itm = new Vue({
                 cm: (result/100).toFixed(this.decimalPoint.cm),
                 m: (result/1000).toFixed(this.decimalPoint.m),
             }
-
             return result;
         }
     },
@@ -54,19 +53,10 @@ var itm = new Vue({
         },
 
         DPIncrease(unit){
-            if (this.decimalPoint[unit] < 10) {
+            if (this.decimalPoint[unit] < 9) {
                 this.decimalPoint[unit]++;
             }
         },
-
-        // DPProceed(value, action){
-        //     console.log(value);
-        //     if (action == 'decrease' && value == 1) {
-        //         value = 2;
-        //     }
-        // }
-
-
     }
 
 });

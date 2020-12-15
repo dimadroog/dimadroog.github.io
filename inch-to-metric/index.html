@@ -15,23 +15,23 @@
 
             <div id="inch-to-metric" class="itm">
                 <h1 class="itm__title">Конвертер дюймов в единицы международной системы</h1>
-                <h2 class="itm__subtitle">Для тех случаев когда размеры указаны целыми и дробными частями дюйма</h2>
+                <h2 class="itm__subtitle">Для тех случаев, когда размеры указаны целыми и дробными частями дюйма</h2>
 
                 <div class="itm__inlet">
-                    <div class="itm-integer">
+                    <div class="itm__item itm-integer">
                         <div class="input-control">
                             <label class="input-control__label" for="integer">Целое</label>
                             <input v-model="modelInteger" type="number" class="input-control__input" name="integer" id="integer" min="0">
                         </div>
                     </div>
-                    <div class="itm-dividend" v-bind:class="{ inactive: inactive }">
+                    <div class="itm__item itm-dividend" v-bind:class="{ inactive: inactive }">
                         <div class="input-control">
                             <label class="input-control__label" for="dividend">Делимое</label>
                             <input v-model="modelDividend" type="number" class="input-control__input" name="dividend" id="dividend" min="0">
                         </div>
                     </div>
-                    <div class="itm-delimiter" v-bind:class="{ inactive: inactive }">/</div>
-                    <div class="itm-divisor" v-bind:class="{ inactive: inactive }">
+                    <div class="itm__item itm-delimiter" v-bind:class="{ inactive: inactive }">/</div>
+                    <div class="itm__item itm-divisor" v-bind:class="{ inactive: inactive }">
                         <div class="input-control">
                             <label class="input-control__label" for="divisor">Делитель</label>
                             <input v-model="modelDivisor" type="number" class="input-control__input" name="divisor" id="divisor" min="0">
