@@ -1,0 +1,1382 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>MANOMY</title>
+        <link rel="stylesheet" href="lib/slick/slick.css">
+        <link rel="stylesheet" href="lib/slick/slick-theme.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/main-page.css">
+    </head>
+    <body>
+
+<!-- HEADER -->
+        <div class="slide-menu aside-wrapper">
+            <aside class="slide-menu__sidebar sidebar aside-sidebar">
+                <div class="sidebar-container">
+                    <div class="sidebar__header">
+                        <img src="img/logo-sidebar.svg" alt="Магазин одежды MANOMY">
+                        <a class="sidebar__phone" href="tel:+78123355595">+7 (812) 33 555 95</a>
+                    </div>
+                    <div class="sidebar__search sidebar-search">
+                        <form action="ACTION" method="POST">
+                            <div class="sidebar-search__insert">
+                                <input type="text" class="sidebar-search__input" placeholder="Введите запрос">
+                                <button class="sidebar-search__btn"><img src="img/search-inverse.svg" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <nav class="sidebar__menu sidebar-menu">
+                    <ul class="sidebar-menu__list">
+                        <li class="sidebar-menu__item sidebar-menu__has-sublist sidebar-sublist-wrapper">
+                            <a class="sidebar-menu__link sidebar-sublist-toggler" href="javascript:void(0)">Мужское</a>
+                            <ul class="sidebar-menu__sublst sidebar-sublst">
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Парки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Куртки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Кроссовки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Шапки</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu__item sidebar-menu__has-sublist sidebar-sublist-wrapper">
+                            <a class="sidebar-menu__link sidebar-sublist-toggler" href="javascript:void(0)">Женское</a>
+                            <ul class="sidebar-menu__sublst sidebar-sublst">
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Парки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Куртки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Кроссовки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Шапки</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu__item sidebar-menu__has-sublist sidebar-sublist-wrapper">
+                            <a class="sidebar-menu__link sidebar-sublist-toggler" href="javascript:void(0)">Бренды</a>
+                            <ul class="sidebar-menu__sublst sidebar-sublst">
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Парки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Куртки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Кроссовки</a>
+                                </li>
+                                <li class="sidebar-sublst__item">
+                                    <a class="sidebar-sublst__link" href="#">Шапки</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-menu__link" href="#">Скидки</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="sidebar__footer">
+                    <div class="sidebar-container">
+                        <div class="sidebar__account sidebar-account">
+                            <a href="#" class="sidebar-account__item">
+                                <div class="sidebar-account__img"><img src="img/user-inverse.svg" alt="Вход"></div>
+                                <div class="sidebar-account__text">Вход</div>
+                            </a>
+                            <a href="#" class="sidebar-account__item">
+                                <div class="sidebar-account__img"><img src="img/plus-inverse.svg" alt="Регистрация"></div>
+                                <div class="sidebar-account__text">Регистрация</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar__lang sidebar-lang sidebar-sublist-wrapper">
+                        <a href="javascript:void(0)" class="sidebar-lang__link sidebar-sublist-toggler">
+                            <img class="sidebar-lang__link-part" src="img/lang-ru.svg" alt="Русский">
+                            <span class="sidebar-lang__link-part">RU</span>
+                            <img class="sidebar-lang__link-part sidebar-lang__link-part_drop" src="img/dropdown-inverse.svg" alt="">
+                        </a>
+                        <ul class="sidebar-sublst sidebar-sublst_lang">
+                            <li class="sidebar-sublst__item">
+                                <a class="sidebar-sublst__link" href="#">English</a>
+                            </li>
+                            <li class="sidebar-sublst__item">
+                                <a class="sidebar-sublst__link" href="#">Русский</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </aside>
+            <div class="slide-menu__content aside-content">
+                <div class="header-wrapper">
+                    <div class="container">
+                        <header class="header">
+                            <div class="header__left">
+                                <nav class="header__menu header-menu">
+                                    <ul class="header-menu__list">
+                                        <li class="header-menu__item header-menu__has-sublist sublist-wrapper">
+                                            <a href="#" class="header-menu__link sublist-toggler">Мужское</a>
+                                            <ul class="header-menu__sublst header-sublst">
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Парки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Куртки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Кроссовки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Шапки</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="header-menu__item header-menu__has-sublist sublist-wrapper">
+                                            <a href="#" class="header-menu__link sublist-toggler">Женское</a>
+                                            <ul class="header-menu__sublst header-sublst">
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Парки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Куртки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Кроссовки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Шапки</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="header-menu__item header-menu__has-sublist sublist-wrapper">
+                                            <a href="#" class="header-menu__link sublist-toggler">Бренды</a>
+                                            <ul class="header-menu__sublst header-sublst">
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Парки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Куртки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Кроссовки</a>
+                                                </li>
+                                                <li class="header-sublst__item">
+                                                    <a class="header-sublst__link" href="#">Шапки</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="header-menu__item">
+                                            <a href="#" class="header-menu__link header-menu__link_active">Скидки</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header__right">
+                                <div class="header__menu-icon">
+                                    <a class="menu-icon aside-toggler" aria-label="Открыть меню">
+                                        <span class="menu-icon__line"></span>
+                                        <span class="menu-icon__line"></span>
+                                        <span class="menu-icon__line"></span>
+                                    </a>
+                                </div>
+                                <div class="header__logo">
+                                    <a href="#" aria-label="Магазин одежды MANOMY">
+                                        <img src="img/logo.svg" alt="Магазин одежды MANOMY">
+                                    </a>
+                                </div>
+                                <div class="header__search header-search">
+                                    <form action="ACTION" method="POST">
+                                        <div class="header-search__insert">
+                                            <input type="text" class="header-search__input" placeholder="Введите запрос" value="Кроссовки">
+                                            <button class="header-search__btn"><img src="img/search.svg" alt=""></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="header__links header-links">
+                                    <div class="header-links__lang header-lang sublist-wrapper">
+                                        <a href="#" class="header-lang__link sublist-toggler">
+                                            <img class="header-lang__link-part" src="img/lang-ru.svg" alt="Русский">
+                                            <span class="header-lang__link-part">RU</span>
+                                            <img class="header-lang__link-part header-lang__link-part_drop" src="img/dropdown-big.svg" alt="">
+                                        </a>
+                                        <ul class="header-sublst header-sublst_lang">
+                                            <li class="header-sublst__item">
+                                                <a class="header-sublst__link" href="#">English</a>
+                                            </li>
+                                            <li class="header-sublst__item">
+                                                <a class="header-sublst__link" href="#">Русский</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-links__user">
+                                        <a aria-label="Профиль пользователя" href="#"><img src="img/user.svg" alt="Профиль пользователя"></a>
+                                    </div>
+                                    <div class="header-links__like">
+                                        <a aria-label="Избранное" href="#"><img src="img/like.svg" alt="Избранное"></a>
+                                    </div>
+                                    <div class="header-links__cart header-cart header-cart_active">
+                                        <a href="#" class="cartlist-toggler" aria-label="Корзина"><img src="img/cart.svg" alt="Корзина"></a>
+                                        <div class="header-cart__count">4</div>
+
+                                        <div class="header-cart__list header-cart-list cartlist">
+                                            <div class="header-cart-list__item header-cart-item">
+                                                <div class="header-cart-item__img">
+                                                    <a href="#" class="header-cart-item__img-link">
+                                                        <img src="img/content/hc.png" alt="PRODUCT_TITLE">
+                                                    </a>
+                                                </div>
+                                                <div class="header-cart-item__summary">
+                                                    <a href="#" class="header-cart-item__title">Helly Hansen</a>
+                                                    <div class="header-cart-item__category">Мужские ботинки</div>
+                                                    <div class="header-cart-item__params">
+                                                        <div class="header-cart-item-param">
+                                                            <div class="header-cart-item-param__title">Размер</div>
+                                                            <div class="header-cart-item-param__val-wrap">
+                                                                <a href="javascript:void(0)" class="header-cart-item-param__val">45</a>
+                                                                <a href="javascript:void(0)" class="header-cart-item-param__val">44,5</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="header-cart-item__total">
+                                                    <div class="header-cart-item__amount header-cart-amount">
+                                                        <a href="javascript:void(0)" class="header-cart-amount__decrease">-</a>
+                                                        <input type="number" class="header-cart-amount__val" value="1" min="0">
+                                                        <a href="javascript:void(0)" class="header-cart-amount__increase">+</a>
+                                                    </div>
+                                                    <div class="header-cart-item__cost">17000</div> <!-- hidden service block -->
+                                                    <div class="header-cart-item__sum">
+                                                        <span>17 000</span> ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="header-cart-list__item header-cart-item">
+                                                <div class="header-cart-item__img">
+                                                    <a href="#" class="header-cart-item__img-link">
+                                                        <img src="img/content/hc.png" alt="PRODUCT_TITLE">
+                                                    </a>
+                                                </div>
+                                                <div class="header-cart-item__summary">
+                                                    <a href="#" class="header-cart-item__title">Helly Hansen</a>
+                                                    <div class="header-cart-item__category">Мужские ботинки</div>
+                                                    <div class="header-cart-item__params">
+                                                        <div class="header-cart-item-param">
+                                                            <div class="header-cart-item-param__title">Размер</div>
+                                                            <div class="header-cart-item-param__val-wrap">
+                                                                <a href="javascript:void(0)" class="header-cart-item-param__val">45</a>
+                                                                <a href="javascript:void(0)" class="header-cart-item-param__val header-cart-item-param__val_active">44,5</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="header-cart-item-param">
+                                                            <div class="header-cart-item-param__title">Цвет</div>
+                                                            <div class="header-cart-item-param__val-wrap">
+                                                                <a href="javascript:void(0)" class="header-cart-item-param__val header-cart-item-param__val_active header-cart-item-param__val_color" style="background: #3A3F54;"></a>
+                                                                <a href="javascript:void(0)" class="header-cart-item-param__val header-cart-item-param__val_color" style="background: #45464A;"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="header-cart-item__total">
+                                                    <div class="header-cart-item__amount header-cart-amount">
+                                                        <a href="javascript:void(0)" class="header-cart-amount__decrease">-</a>
+                                                        <input type="number" class="header-cart-amount__val" value="1" min="0">
+                                                        <a href="javascript:void(0)" class="header-cart-amount__increase">+</a>
+                                                    </div>
+                                                    <div class="header-cart-item__cost">17000</div> <!-- hidden service block -->
+                                                    <div class="header-cart-item__sum">
+                                                        <span>17 000</span> ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="header-cart-list__footer header-cart-footer">
+                                                <div class="header-cart-footer__total">
+                                                    <div class="header-cart-footer__amount">2 товара</div>
+                                                    <div class="header-cart-footer__sum"><span>34 000</span> ₽</div>
+                                                </div>
+                                                <div class="header-cart-footer__button">
+                                                    <a href="#" class="header-cart-footer-button">Оформить заказ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+                <div class="page-body">
+<!-- END HEADER -->
+
+
+
+
+
+
+<!-- three main sliders -->
+<div class="container">
+    <div class="main-sliders">
+        <div class="main-sliders__one">
+            <div class="main-sliders__badge badge">Актуальное</div>
+            <div class="main-slider main-slider_one">
+                <div class="main-slider__item" style="background-image: url(img/content/s11.png);">
+                    <div class="main-slider__caption main-slider-caption main-slider-caption_light">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/content/s12.png);">
+                    <div class="main-slider__caption main-slider-caption main-slider-caption_light">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/content/s13.png);">
+                    <div class="main-slider__caption main-slider-caption main-slider-caption_light">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-sliders__two">
+            <div class="main-sliders__badge badge">Новое</div>
+            <div class="main-slider main-slider_two">
+                <div class="main-slider__item" style="background-image: url(img/content/s21.png);">
+                    <div class="main-slider__caption main-slider-caption">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/content/s22.png);">
+                    <div class="main-slider__caption main-slider-caption">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/content/s23.png);">
+                    <div class="main-slider__caption main-slider-caption">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-sliders__three">
+            <div class="main-slider main-slider_three">
+                <div class="main-slider__item" style="background-image: url(img/content/s31.png);">
+                    <div class="main-sliders__badge badge">Helly Hansen</div>
+                    <div class="main-slider__caption main-slider-caption main-slider-caption_light">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Helly Hansen</div>
+                    </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/content/s32.png);">
+                    <div class="main-sliders__badge badge">Grey Goose</div>
+                    <div class="main-slider__caption main-slider-caption main-slider-caption_light">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Grey Goose</div>
+                    </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/content/s33.png);">
+                    <div class="main-sliders__badge badge">Dubliner Navy</div>
+                    <div class="main-slider__caption main-slider-caption main-slider-caption_light">
+                        <div class="main-slider-caption__category">Мужская парка</div>
+                        <div class="main-slider-caption__title">Dubliner Navy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end three main sliders -->
+
+
+
+<!-- main products big -->
+<div class="container">
+    <div class="main-big-products">
+        <div class="main-big-products__row">
+            <div class="main-big-products__col">
+
+                <div class="main-big-products__item main-product">
+
+                    <div class="main-product__badge badge badge_white">Новинка!</div>
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__subtitle">
+                                    Gore-Tex Cruiser Secret Zip Pocket Black
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                        <div class="main-product__slider main-product-slider">
+                            <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp1.png);">
+                            </a>
+                            <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp2.png);">
+                            </a>
+                            <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp3.png);">
+                            </a>
+                        </div>
+
+                </div>
+
+            </div>
+            <div class="main-big-products__col">
+
+                <div class="main-big-products__item main-product">
+
+                    <div class="main-product__badge badge badge_white">Скидки</div>
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__subtitle">
+                                    Gore-Tex Cruiser Secret Zip Pocket Black
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider main-product-slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp2.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp3.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp4.png);">
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="main-big-products__col">
+
+                <div class="main-big-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__subtitle">
+                                    Gore-Tex Cruiser Secret Zip Pocket Black
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider main-product-slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp3.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp4.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp5.png);">
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="main-big-products__col">
+
+                <div class="main-big-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__subtitle">
+                                    Gore-Tex Cruiser Secret Zip Pocket Black
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider main-product-slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp4.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp5.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp6.png);">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="main-big-products__col">
+
+                <div class="main-big-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__subtitle">
+                                    Gore-Tex Cruiser Secret Zip Pocket Black
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider main-product-slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp5.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp6.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp1.png);">
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="main-big-products__col">
+
+                <div class="main-big-products__item main-product">
+
+                    <div class="main-product__badge badge badge_white">Распродажа</div>
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__subtitle">
+                                    Gore-Tex Cruiser Secret Zip Pocket Black
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider main-product-slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp6.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp1.png);">
+                        </a>
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sp2.png);">
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main products big -->
+
+
+<!-- main products small -->
+<div class="container">
+    <div class="main-small-products">
+        <div class="main-small-products__row">
+
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps1.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps2.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps3.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps4.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps5.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps6.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps7.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                                <div class="product-info__params">
+                                    <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                    <div class="product-info__param-item" data-price="18500">s</div>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps8.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps1.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps2.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps3.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-small-products__col">
+
+                <div class="main-small-products__item main-product">
+
+                    <div class="main-product__info product-info">
+                        <div class="product-info__body">
+                            <a href="#PRODUCTPAGE">
+                                <div class="product-info__title">
+                                    Helly Hansen
+                                </div>
+                                <div class="product-info__category">
+                                    Женская куртка
+                                </div>
+                            </a>
+                            <div class="product-info__params">
+                                <div class="product-info__param-item product-info__param-item_active" data-price="17000">xs</div>
+                                <div class="product-info__param-item" data-price="18500">s</div>
+                            </div>
+                        </div>
+                        <a href="#PRODUCTPAGE">
+                            <div class="product-info__footer">
+                                <div class="product-info__arrow">
+                                    <div class="product-info__price">
+                                        <span>17 000</span> ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-product__slider">
+                        <a href="#PRODUCTPAGE" class="main-product-slider__item" style="background-image: url(img/content/sps4.png);">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end main products small -->
+
+
+
+
+<!-- brands slider -->
+<div class="container">
+    <div class="brands-slider">
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb1.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb2.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb1.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb2.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb1.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb2.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb1.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb2.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb1.png" alt="BRAND TITLE">
+            </div>
+        </div>
+        <div class="brands-slider__item">
+            <div class="brands-slider__insert">
+                <img class="brands-slider__img" src="img/content/sb2.png" alt="BRAND TITLE">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end brands slider -->
+
+
+
+<!-- news and arrivals -->
+<div class="container">
+    <div class="updates">
+        <div class="updates__news main-news">
+            <div class="news-slider-wrapper">
+                <div class="updates__badge badge badge_white">Новости</div>
+                <div class="news-slider">
+                    <div class="news-slider__item" style="background-image: url(img/content/sn1.png);">
+                        <div class="news-slider__caption news-slider-caption news-slider-caption_light">
+                            <div class="news-slider-caption__title">Новый тип Gore-Tex в одеже IISE</div>
+                        </div>
+                    </div>
+                    <div class="news-slider__item" style="background-image: url(img/content/sn2.png);">
+                        <div class="news-slider__caption news-slider-caption news-slider-caption_light">
+                            <div class="news-slider-caption__title">Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                    <div class="news-slider__item" style="background-image: url(img/content/sn3.png);">
+                        <div class="news-slider__caption news-slider-caption news-slider-caption_light">
+                            <div class="news-slider-caption__title">Lorem ipsum, dolor sit amet consectetur, adipisicing elit.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="updates__arrivals main-arrivals">
+            <div class="updates__badge badge badge_white">Кроссовки</div>
+            <div class="main-arrivals__insert">
+                <div class="main-arrivals__item main-arrivals-item">
+                    <div class="main-arrivals-item__img">
+                        <a href="#">
+                            <img src="img/content/cross.png" alt="ITEM TITLE">
+                        </a>
+                    </div>
+                    <div class="main-arrivals-item__summary">
+                        <div class="main-arrivals-item__category">кроссовки</div>
+                        <div class="main-arrivals-item__title">
+                            <a class="main-arrivals-item__link" href="#">The North Face Mens Moc Cadman</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-arrivals__item main-arrivals-item">
+                    <div class="main-arrivals-item__img">
+                        <a href="#">
+                            <img src="img/content/cross.png" alt="ITEM TITLE">
+                        </a>
+                    </div>
+                    <div class="main-arrivals-item__summary">
+                        <div class="main-arrivals-item__category">кроссовки</div>
+                        <div class="main-arrivals-item__title">
+                            <a class="main-arrivals-item__link" href="#">Timberland 6 INCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-arrivals__item main-arrivals-item">
+                    <div class="main-arrivals-item__img">
+                        <a href="#">
+                            <img src="img/content/cross.png" alt="ITEM TITLE">
+                        </a>
+                    </div>
+                    <div class="main-arrivals-item__summary">
+                        <div class="main-arrivals-item__category">кроссовки</div>
+                        <div class="main-arrivals-item__title">
+                            <a class="main-arrivals-item__link" href="#">New Balance 990v4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end news and arrivals -->
+
+
+
+
+
+
+
+<!-- FOOTER -->
+                </div> <!-- /.page-body -->
+            </div> <!-- /.slide-menu__content -->
+        </div> <!-- /.slide-menu -->
+
+        <footer class="footer">
+        <!-- <footer class="footer footer_product-detail"> -->
+            <div class="container">
+                <div class="footer__top footer-top">
+                    <div class="footer-top__logo">
+                        <a href="#">
+                            <img src="img/logo-footer.svg" alt="Магазин одежды MANOMY">
+                        </a>
+                    </div>
+                    <div class="footer-top__phone">
+                        <div class="footer-top__label">Телефон</div>
+                        <div class="footer-top__content">
+                            <a class="footer-top__phone-link" href="tel:+78123355595">+7 (812) 33 555 95</a>
+                        </div>
+                    </div>
+                    <div class="footer-top__social">
+                        <div class="footer-top__label">Социальные сети</div>
+                        <div class="footer-top__content">
+                            <a class="footer-top__social-link" href="#"><img src="img/inst.svg" alt="Мы в Instagram"></a>
+                            <a class="footer-top__social-link" href="#"><img src="img/fb.svg" alt="Мы в FaceBook"></a>
+                            <a class="footer-top__social-link" href="#"><img src="img/vk.svg" alt="Мы в VKontakte"></a>
+                        </div>
+                    </div>
+                    <div class="footer-top__payment">
+                        <div class="footer-top__label">Способы оплаты</div>
+                        <div class="footer-top__content">
+                            <img class="footer-top__payment-item" src="img/mastercard.svg" alt="Карта MasterCard">
+                            <img class="footer-top__payment-item" src="img/visa.svg" alt="Карта Visa">
+                            <img class="footer-top__payment-item" src="img/mir.svg" alt="Карта МИР">
+                            <img class="footer-top__payment-item" src="img/paypal.svg" alt="PayPal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__delimiter"></div>
+            <div class="container">
+                <div class="footer__bottom footer-bottom">
+                    <nav class="footer-bottom__menu footer-menu">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__item">
+                                <a href="#" class="footer-menu__link">Контакты</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="#" class="footer-menu__link">О проекте</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="#" class="footer-menu__link">Оплата и доставка</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="#" class="footer-menu__link footer-menu__link_active">Обмен и возврат</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer-bottom__subscribe footer-subscribe">
+                        <form action="ACTION" method="POST">
+                            <div class="footer-subscribe__insert">
+                                <input type="text" class="footer-subscribe__input" placeholder="Подпишись на рассылку">
+                                <button class="footer-subscribe__btn">Подписаться</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="footer-bottom__full-version">
+                        <a href="#" class="footer-bottom__full-version-link">Перейти на полную версию сайта</a>
+                    </div>
+
+                </div>
+
+                <div class="footer__copyright footer-copyright">
+                    <span class="footer-copyright__item">
+                        &copy;2020
+                    </span>
+                    <span class="footer-copyright__item">
+                        <a href="#" class="footer-copyright__link">Политика о конфиденциальности</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+<!-- END FOOTER -->
+
+        <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
