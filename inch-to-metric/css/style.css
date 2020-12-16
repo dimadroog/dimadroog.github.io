@@ -209,18 +209,25 @@ body {
   padding: 0.2em 0.5em;
   font-size: 1.2em;
   border-radius: 4px;
-  background: #d0d0d0;
-  color: #fff;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  color: #d0d0d0;
   font-family: monospace;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
 
-.decimal-point:hover,
+.decimal-point:hover {
+  background: #d0d0d0;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .decimal-point:focus {
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
+  border: 1px solid #b7b7b7;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
