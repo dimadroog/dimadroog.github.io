@@ -30,7 +30,7 @@ let itm = new Vue({
             result = result*25.4;
             result = {
                 mm: result.toFixed(this.decimalPoint.mm),
-                cm: (result/100).toFixed(this.decimalPoint.cm),
+                cm: (result/10).toFixed(this.decimalPoint.cm),
                 m: (result/1000).toFixed(this.decimalPoint.m),
             }
             return result;
