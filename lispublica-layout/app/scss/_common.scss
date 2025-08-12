@@ -1,0 +1,19 @@
+@use '_variables' as *;
+/*header*/
+@layer components {
+    .container {
+        @apply mx-auto px-4 max-w-[1300px];
+    }
+    .body{
+        @apply min-h-screen  flex flex-col bg-primary-50;
+    }
+    .main{
+        @apply flex-grow pb-10;
+    }
+    a{
+        @apply text-primary-700 underline duration-200;
+        @apply hover:text-primary-800 hover:no-underline;
+    }
+}
+
+/*end header*/

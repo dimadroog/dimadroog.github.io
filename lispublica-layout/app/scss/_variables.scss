@@ -1,0 +1,110 @@
+@use 'sass:map';
+@use 'sass:string';
+@use 'sass:list';
+
+$themeLight: (
+  primary: (
+    '50':  #fffcfb,
+    '100': #fef5f0,
+    '200': #fce8de,
+    '300': #fad6c4,
+    '400': #f7bfa3,
+    '500': #f4a37b,
+    '600': #ef824b,
+    '700': #eb5c14,
+    '800': #82330b,
+    '900': #441b06,
+    '950': #2f1204
+  ),
+  secondary: (
+    '50':  #fffefd,
+    '100': #fdfaf6,
+    '200': #fbf4ec,
+    '300': #f8ecdd,
+    '400': #f5e1c9,
+    '500': #f0d3b2,
+    '600': #ebc396,
+    '700': #e5b176,
+    '800': #995f1d,
+    '900': #462c0d,
+    '950': #2b1b08
+  ),
+  tertiary: (
+    '50':  #fbfbfe,
+    '100': #edf0f9,
+    '200': #d7def2,
+    '300': #b8c5e7,
+    '400': #90a4da,
+    '500': #607cca,
+    '600': #3755a6,
+    '700': #213363,
+    '800': #162141,
+    '900': #0f172d,
+    '950': #0d1426
+  ),
+  error: (
+    '50':  #fefbfb,
+    '100': #fdeeed,
+    '200': #fad8d7,
+    '300': #f5bab8,
+    '400': #f09491,
+    '500': #e96560,
+    '600': #e12d27,
+    '700': #a61b17,
+    '800': #63100d,
+    '900': #3a0a08,
+    '950': #2d0706
+  ),
+  success: (
+    '50':  #f9fffa,
+    '100': #e9ffea,
+    '200': #cdfed0,
+    '300': #a6fdac,
+    '400': #74fc7d,
+    '500': #37fb44,
+    '600': #05e414,
+    '700': #03910c,
+    '800': #025c08,
+    '900': #013d05,
+    '950': #013204
+  )
+);
+
+// Генерация CSS-переменных для :root и .dark
+:root {
+  @each $group, $shades in $themeLight {
+    @each $tone, $value in $shades {
+      --color-#{$group}-#{$tone}: #{$value};
+    }
+  }
+}
+.dark {
+  @each $group, $shades in $themeLight {
+    @each $tone, $value in $shades {
+      --color-#{$group}-#{$tone}: #{$value};
+    }
+  }
+}
+
+// Функция обращения к цвету по ключу типа 'primary-800'
+@function color($key, $theme: $themeLight) {
+  $parts: string.split($key, '-');
+
+  @if list.length($parts) != 2 {
+    @error "Invalid color key: #{$key}. Format should be 'group-tone', e.g., 'primary-800'";
+  }
+
+  $group: list.nth($parts, 1);
+  $tone: list.nth($parts, 2);
+
+  @if not map.has-key($theme, $group) {
+    @error "Unknown color group: #{$group}";
+  }
+  $shades: map.get($theme, $group);
+
+  @if not map.has-key($shades, $tone) {
+    @error "Unknown color tone: #{$tone} in group: #{$group}";
+  }
+
+  @return map.get($shades, $tone);
+}
