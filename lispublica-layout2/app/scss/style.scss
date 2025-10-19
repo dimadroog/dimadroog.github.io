@@ -1,0 +1,12 @@
+@use '_variables' as *;
+// @use "_fonts";
+@use '_header';
+
+
+body{
+    background-color: var(--tertiary-0);
+    color: var(--tertiary-900);
+}
+a{
+    color: var(--primary-200);
+}
