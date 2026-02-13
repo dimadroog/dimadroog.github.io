@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <title>Вампирка</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+
+  <style>
+    body {
+      transition: background-color .3s ease, color .3s ease;
+    }
+  </style>
+
+  <script>
+    // Инициализация темы
+    (function () {
+      const storedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const theme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+</head>
+<body class="bg-body-tertiary"><div class="container py-4">
+    <div class="d-flex justify-content-end mb-3">
+      <button id="themeToggle" class="btn btn-outline-secondary btn-sm">
+        Тёмная тема
+      </button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <!-- Форма -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h1 class="h4 mb-4">
+                <svg class="align-baseline" fill="#dc3545" width="18px" height="18px" viewBox="-4.5 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.647 13.663c-.033-.091-.066-.166-.104-.239l.005.011c-.146-.341-1.32-2.609-1.516-2.918l-5.451-10.518-5.59 10.776c-.19.31-1.232 2.32-1.376 2.66l-.057.126c-.353.845-.558 1.826-.558 2.856 0 4.187 3.394 7.582 7.582 7.582s7.582-3.394 7.582-7.582c0-.002 0-.004 0-.006 0-.03.001-.066.001-.101 0-.955-.19-1.866-.535-2.696l.017.047zm-7.062 8.355c-3.085 0-5.585-2.501-5.585-5.586 0-.973.249-1.887.686-2.683l-.015.029c-.069.355-.109.763-.11 1.181v.001c.002 3.697 2.999 6.694 6.696 6.696.113 0 .234 0 .346-.006-.594.233-1.283.368-2.003.368-.008 0-.015 0-.023 0h.001z"/></svg>
+                Накапать крови для Вампирки 
+            </h1>
+
+            <form id="orderForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Название</label>
+                <input
+                  id="nameInput"
+                  name="Name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Название запчастей или услуг"
+                  required
+                >
+                <div class="invalid-feedback">
+                  Поле не может быть пустым
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="priceInput" class="form-label">Стоимость</label>
+                <input
+                  id="priceInput"
+                  name="Price"
+                  type="number"
+                  step="0.01"
+                  class="form-control"
+                  placeholder="Стоимость"
+                  required
+                >
+                <div class="invalid-feedback">
+                  Поле не может быть пустым
+                </div>
+              </div>
+            
+              <button id="submitBtn" type="submit" class="btn btn-danger px-lg-5">
+                <span id="submitText">Отправить</span>
+                <span id="submitSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <!-- Результат общей суммы после отправки -->
+            <div id="result" class="mt-3"></div>
+          </div>
+        </div>
+
+        <!-- Блок со всеми записями -->
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-2 gap-2">
+              <div>
+                <h5 class="mb-1">Всего крови выпито: <span id="totalLine">—</span></h5>
+              </div>
+
+              <div class="btn-group btn-group-sm" role="group">
+                <button id="refreshBtn" class="btn btn-outline-secondary">
+                  Обновить
+                </button>
+                <button id="deleteLastBtn" class="btn btn-outline-danger">
+                  Удалить последнюю запись
+                </button>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-sm align-middle mb-0" id="itemsTable">
+                <thead>
+                  <tr>
+                    <th>Название</th>
+                    <th class="text-end">Стоимость</th>
+                  </tr>
+                </thead>
+                <tbody id="itemsBody">
+                  <tr>
+                    <td colspan="2" class="text-muted text-center">Загрузка...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    // === Переключатель темы ===
+    const themeToggleBtn = document.getElementById('themeToggle');
+
+    function updateThemeToggleText() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+      themeToggleBtn.textContent = currentTheme === 'dark'
+        ? 'Светлая тема'
+        : 'Тёмная тема';}
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateThemeToggleText();
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+
+    updateThemeToggleText();
+
+    // === Логика формы ===
+    const form = document.getElementById('orderForm');
+    const resultDiv = document.getElementById('result');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const submitSpinner = document.getElementById('submitSpinner');
+
+    const SCRIPTURL = 'https://script.google.com/macros/s/AKfycbyHW2edeJuK010r2gbljqFZ_3zoSTi4L97Y3pxR3W4_uVOcYGB5OEZBbL9nugG5vebo/exec';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitSpinner.classList.remove('d-none');
+      submitText.textContent = 'Отправка...';
+
+      resultDiv.innerHTML = '';
+      resultDiv.className = 'mt-3';
+
+      const formData = new FormData(form);
+
+      fetch(SCRIPTURL, {
+        method: 'POST',
+        body: formData,
+      })
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error('HTTP error ' + response.status);
+        }
+
+        const data = await response.json();
+
+        if (data.result === 'success') {
+          const total = Number(data.d2) || data.d2;
+
+          resultDiv.classList.add('alert', 'alert-secondary');
+          resultDiv.textContent = 'Данные отправлены. Общая сумма: ' + total.toLocaleString();
+          form.reset();
+          form.classList.remove('was-validated');
+
+          // После успешной отправки перезагружаем список и общую сумму
+          loadItems();
+        } else {
+          resultDiv.classList.add('alert', 'alert-danger');
+          resultDiv.textContent = 'Ошибка: ' + JSON.stringify(data);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        resultDiv.classList.add('alert', 'alert-danger');
+        resultDiv.textContent = 'Ошибка при отправке: ' + error.message;
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitSpinner.classList.add('d-none');
+        submitText.textContent = 'Отправить';
+      });
+    });
+
+    // === Загрузка всех записей B и C ===
+    const itemsBody = document.getElementById('itemsBody');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const deleteLastBtn = document.getElementById('deleteLastBtn');
+    const totalLine = document.getElementById('totalLine');
+
+    function renderTotal(total) {
+      if (total === null || total === undefined || total === '') {
+        totalLine.textContent = '—';
+        return;
+      }
+      const num = Number(total);
+      const formatted = isNaN(num) ? total : num.toLocaleString();
+      totalLine.textContent = formatted;
+    }
+
+    function renderItems(items) {
+      if (!items || items.length === 0) {
+        itemsBody.innerHTML = `
+          <tr>
+            <td colspan="2" class="text-muted text-center">Записей пока нет.</td>
+          </tr>`;
+        return;
+      }
+
+      itemsBody.innerHTML = items.map(item => `
+        <tr>
+          <td class="small">${item.name ?? ''}</td>
+          <td class="small text-end ${(item.price > 5000)?'text-danger':''} ">${item.price.toLocaleString() ?? ''}</td>
+        </tr>
+      `).join('');
+    }
+
+    function loadItems() {
+      itemsBody.innerHTML = `
+        <tr>
+          <td colspan="2" class="text-muted text-center">Загрузка...</td>
+        </tr>`;
+
+      fetch(SCRIPTURL, { method: 'GET' })
+        .then(async (response) => {
+          if (!response.ok) {
+            throw new Error('HTTP error ' + response.status);
+          }
+          const data = await response.json();
+
+          if (data.result === 'success') {
+            renderItems(data.items);renderTotal(data.total);
+          } else {
+            itemsBody.innerHTML = `
+              <tr>
+                <td colspan="2" class="text-danger text-center">
+                  Ошибка: ${JSON.stringify(data)}
+                </td>
+              </tr>`;
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          itemsBody.innerHTML = `
+            <tr>
+              <td colspan="2" class="text-danger text-center">
+                Ошибка при загрузке: ${error.message}
+              </td>
+            </tr>`;
+        });
+    }
+
+    // Удаление последней записи
+    deleteLastBtn.addEventListener('click', () => {
+      if (!confirm('Удалить последнюю запись?')) {
+        return;
+      }
+
+      deleteLastBtn.disabled = true;
+      deleteLastBtn.textContent = 'Удаление...';
+
+      const formData = new FormData();
+      formData.append('action', 'delete_last');
+
+      fetch(SCRIPTURL, {
+        method: 'POST',
+        body: formData,
+      })
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error('HTTP error ' + response.status);
+        }
+        const data = await response.json();
+
+        if (data.result === 'success') {
+          // обновляем общую сумму в верхнем блоке
+          renderTotal(data.d2);
+          // перезагружаем список
+          loadItems();
+        } else {
+          alert('Ошибка: ' + (data.message || JSON.stringify(data)));
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Ошибка при удалении: ' + error.message);
+      })
+      .finally(() => {
+        deleteLastBtn.disabled = false;
+        deleteLastBtn.textContent = 'Удалить последнюю запись';
+      });
+    });
+
+    refreshBtn.addEventListener('click', () => {
+      loadItems();
+    });
+
+    // Первая загрузка списка при открытии страницы
+    document.addEventListener('DOMContentLoaded', loadItems);
+  </script>
+</body>
+</html>
